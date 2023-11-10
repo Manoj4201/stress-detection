@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOGIN</title>
+  <link rel="stylesheet" href="/static/CSS/style1.css">
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="abc">
+    <div class="container">
+      <div class="logo">
+        <img src="/static/images/pngegg.png" alt="logo" height="5%" width="10%" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/register">Register</a></li>
+          <li><a href="/login">Login </a></li>
+          <li><a href="/loginadmin">Admin</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="Scriptcontent">
+      <!-- Stylish Login Page Start -->
+
+      <form class="codehim-form" method="POST">
+        <div class="loginimage">
+          <img src="/static/images/profile.png" />
+        </div>
+        <label><i class="fa fa-envelope"></i> User name:</label>
+        <input type="text" class="cm-input" placeholder="Enter your User name" name="username">
+
+        <label for="pass"><i class="fa fa-lock"></i> Password:</label>
+        <input id="pass" type="password" class="cm-input" placeholder="Enter your password" name="password">
+         <div class="msg">{{ msg }}</div>
+        <input type="submit" value="login" class="btn-login  gr-bg">
+
+      </form>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <script>
+        var messages = {{ messages | safe }};
+        for (var i = 0; i < messages.length; i++) {
+          alert(messages[i]);
+        }
+      </script>
+      {% endif %}
+      {% endwith %}
+
+      <!-- Stylish Login Page End -->
+    </div>
+  </div>
+</body>
+
+</html>

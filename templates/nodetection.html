@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Detection</title>
+  <link rel="stylesheet" href="/static/CSS/style1.css">
+  <link rel="stylesheet" href="/static/CSS/footer.css">
+  <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-grid.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    function previewImage() {
+      var file = document.getElementById("imagefile").files;
+      if (file.length > 0) {
+        var fileReader = new FileReader();
+
+        fileReader.onload = function (event) {
+          document.getElementById("preview").setAttribute("src", event.target.result);
+        };
+
+        fileReader.readAsDataURL(file[0]);
+      }
+    }
+  </script>
+  <style>
+    #abcd {
+      width: 100%;
+      height: 70vh;
+      background-image: url("/static/images/no-detection-wall-1.jpg");
+      background-size: cover;
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navigation bar start  -->
+  <div id="abcd">
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="/static/images/pngegg.png" alt="logo" height="5%" width="10%" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/first">Upload</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- <img src="/static/images/top-bg.jpg" alt="" width="100%"> -->
+    </header>
+  </div>
+  <!-- navigation bar end  -->
+
+  <section id="service" class="services-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-title text-center">
+            <h2> NO Detection:</h2>
+          </div>
+          </br> </br> </br>
+          <div class="banner-text">
+            <div class="animation-area">
+              <div
+                style="display:flex;flex-direction:column; align-items:center; justify-content:center; text-align:center;">
+                <div class="animation-area"
+                  style="height: 50vh;display:flex;flex-direction:column; align-items:center;">
+                  <h1> Sorry. We are not able to make a prediction with this image </h1>
+                  <h3 style=" padding-top:20px;"> Please try capturing another image</h3>
+
+                  <div class="column">
+                    <img src="/static/{{orig}}" alt="Original" style="width:400px;height:500px;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section strat -->
+
+  <section>
+    <footer class="footer-distributed">
+      <div class="container">
+        <div class="footer-left">
+          <h3>Stress<span>Detection</span></h3>
+          <p class="footer-links">
+            <a href="/" class="link-1">Home</a>
+            <a href="/about">About</a>
+          </p>
+
+          <p class="footer-company-name">Company Name © 2015</p>
+        </div>
+
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>#S6,Yeswanthpura</span> Bengaluru,Karnataka</p>
+          </div>
+
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+91 9488118584</p>
+          </div>
+
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:stress34@company.com">bapujailcollege.com</a></p>
+          </div>
+        </div>
+
+        <div class="footer-right">
+
+          <p class="footer-company-about">
+            <span>About the company</span>
+            Every person has a reason for having a stressful life.
+            The major goal of thisstudy is to use Machine Learning
+            and Image Processing methods to identify stress in the human body.
+          </p>
+
+          <div class="footer-icons">
+
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!-- footer section end  -->
+
+
+</body>
+
+</html>
