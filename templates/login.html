@@ -115,8 +115,8 @@
   <link rel="stylesheet" href="/static/css/css/owl.carousel.css">
   <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-  crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -124,35 +124,17 @@
   <header id="header">
 
     <div class="container main-menu">
-      <div class="row align-items-center justify-content-between d-flex">
+      <div class="align-items-center justify-content-between d-flex">
         <div id="logo">
           <a href="index.html"><img src="/static/images/img/logo.png" alt="" title="" /></a>
         </div>
         <nav id="nav-menu-container">
           <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="index.html">Home</a></li> -->
             <li><a href="about.html">About</a></li>
-            <li><a href="packages.html">Packages</a></li>
-            <li><a href="hotels.html">Hotels</a></li>
-            <li><a href="insurance.html">Insurence</a></li>
-            <li class="menu-has-children"><a href="">Blog</a>
-              <ul>
-                <li><a href="blog-home.html">Blog Home</a></li>
-                <li><a href="blog-single.html">Blog Single</a></li>
-              </ul>
-            </li>
-            <li class="menu-has-children"><a href="">Pages</a>
-              <ul>
-                <li><a href="elements.html">Elements</a></li>
-                <li class="menu-has-children"><a href="">Level 2 </a>
-                  <ul>
-                    <li><a href="#">Item One</a></li>
-                    <li><a href="#">Item Two</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">login</a></li>
+            <li><a href="loginadmin.html">admin</a></li>
+            <li><a href="performance.html">performance</a></li>
           </ul>
         </nav><!-- #nav-menu-container -->
       </div>
@@ -171,24 +153,24 @@
           <input type="text" placeholder="Email or Phone" id="username">
 
           <label for="password">Password</label>
-          <input type="password" placeholder="Password" id="password" >
+          <input type="password" placeholder="Password" id="password">
 
           <button class="mt-4">Log In</button>
 
         </form>
-      
+
 
       </div>
-    </div>  {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <script>
-          var messages = {{ messages | safe }};
-          for (var i = 0; i < messages.length; i++) {
-            alert(messages[i]);
-          }
-        </script>
-        {% endif %}
-        {% endwith %}
+    </div> {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <script>
+      var messages = {{ messages | safe }};
+      for (var i = 0; i < messages.length; i++) {
+        alert(messages[i]);
+      }
+    </script>
+    {% endif %}
+    {% endwith %}
   </section>
 
 
@@ -201,11 +183,14 @@
   </section>
 
 
-
-
-
-
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
+  <script src="/static/tests/js/vendor/jquery-2.2.4.min.js"></script> 
+  <script src="/static/tests/js/vendor/bootstrap.min.js"></script>  
+  <script src="/static/tests/js/hoverIntent.js"></script>
+  <script src="/static/tests/js/superfish.min.js"></script> 
+  <script src="/static/tests/js/jquery.magnific-popup.min.js"></script> 
+  <script src="/static/tests/js/owl.carousel.min.js"></script> 
+  <script src="/static/tests/js/main.js"></script>
 
 </body>
 
