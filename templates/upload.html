@@ -2,370 +2,399 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/footer.css">
-    <!-- <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-grid.min.css"> -->
-    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/footer.css">
+  <!-- <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-grid.min.css"> -->
+  <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css"
     integrity="sha512-RWhcC19d8A3vE7kpXq6Ze4GcPfGe3DQWuenhXAbcGiZOaqGojLtWwit1eeM9jLGHFv8hnwpX3blJKGjTsf2HxQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Favicon-->
-    <link rel="shortcut icon" href="img/fav.png">
-    <!-- Author Meta -->
-    <meta name="author" content="colorlib">
-    <!-- Meta Description -->
-    <meta name="description" content="">
-    <!-- Meta Keyword -->
-    <meta name="keywords" content="">
-    <!-- meta character set -->
-    <meta charset="UTF-8">
-    <!-- Site Title -->
-    <title>Travel</title>
-    <!--
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/fav.png">
+  <!-- Author Meta -->
+  <meta name="author" content="colorlib">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Travel</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .upload-card {
+      width: 400px;
+      padding: 30px;
+      margin: 0 auto;
+      background-color: #f5f5f5;
+    }
+
+    .imagePreview {
+      width: 38px;
+      height: 38px;
+      border-radius: 4px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-right: 15px;
+    }
+
+    .file-upload {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
+      margin-bottom: 15px;
+      position: relative;
+      border-radius: 4px;
+      background-color: #fff;
+    }
+
+    .file-select {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+
+    .file-select-name {
+      margin-left: 15px;
+    }
+
+    .file-select input[type=file] {
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .file-remove {
+      margin-left: 15px;
+      position: absolute;
+      right: 15px;
+      top: 20px;
+    }
+  </style>
+  <!--
 			CSS
 			============================================= -->
-    <link rel="stylesheet" href="/static/css/css/linearicons.css">
-    <link rel="stylesheet" href="/static/css/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/css/css/bootstrap.css">
-    <link rel="stylesheet" href="/static/css/css/magnific-popup.css">
-    <link rel="stylesheet" href="/static/css/css/jquery-ui.css">
-    <link rel="stylesheet" href="/static/css/css/nice-select.css">
-    <link rel="stylesheet" href="/static/css/css/animate.min.css">
-    <link rel="stylesheet" href="/static/css/css/owl.carousel.css">
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  <link rel="stylesheet" href="/static/css/css/linearicons.css">
+  <link rel="stylesheet" href="/static/css/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/css/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/css/css/magnific-popup.css">
+  <link rel="stylesheet" href="/static/css/css/jquery-ui.css">
+  <link rel="stylesheet" href="/static/css/css/nice-select.css">
+  <link rel="stylesheet" href="/static/css/css/animate.min.css">
+  <link rel="stylesheet" href="/static/css/css/owl.carousel.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script>
-        function previewImage() {
-            var file = document.getElementById("imagefile").files;
-            if (file.length > 0) {
-                var fileReader = new FileReader();
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+  <script>
+    function previewImage() {
+      var file = document.getElementById("imagefile").files;
+      if (file.length > 0) {
+        var fileReader = new FileReader();
 
-                fileReader.onload = function (event) {
-                    document.getElementById("preview").setAttribute("src", event.target.result);
-                };
+        fileReader.onload = function (event) {
+          document.getElementById("preview").setAttribute("src", event.target.result);
+        };
 
-                fileReader.readAsDataURL(file[0]);
-            }
-        }
-    </script>
+        fileReader.readAsDataURL(file[0]);
+      }
+    }
+  </script>
 </head>
 
 <body>
-    <!-- navigation bar start  -->
-    <header id="header">
+  <!-- navigation bar start  -->
+  <header id="header">
 
-        <div class="container main-menu">
-          <div class="align-items-center justify-content-between d-flex">
-            <div id="logo">
-              <a href="/index"><img src="/static/images/img/logo.png" alt="" title="" /></a>
-            </div>
-            <nav id="nav-menu-container">
-              <ul class="nav-menu">
-                <!-- <li><a href="//index">Home</a></li> -->
-                <li><a href="/about">About</a></li>
-                <li><a href="/login">login</a></li>
-                <li><a href="/loginadmin">admin</a></li>
-                <li><a href="/performance">performance</a></li>
-              </ul>
-            </nav><!-- #nav-menu-container -->
-          </div>
+    <div class="container main-menu">
+      <div class="align-items-center justify-content-between d-flex">
+        <div id="logo">
+          <a href="/index"><img src="/static/images/img/logo.png" alt="" title="" /></a>
         </div>
-      </header><!-- #header -->
-
-
-    <!-- start banner Area -->
-    <section class="about-banner relative">
-        <div class="overlay overlay-bg"></div>
-        <div class="container">
-            <div class="row d-flex align-items-center justify-content-center">
-                <div class="about-content col-lg-12">
-                    <h1 class="text-white">
-                       Upload
-                    </h1>
-                    <p class="text-white link-nav"><a href="/index">Home </a> <span
-                            class="lnr lnr-arrow-right"></span> <a href="/upload">Upload</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End banner Area -->
-
-
-
-    <!-- upload section start -->
-    <!-- <form action="/uploadimage" method="post" enctype="multipart/form-data">
-
-            <div class="mb-3  file-upload">
-                <div class="file-select">
-                    <div class="imagePreview"></div>
-                <input type="file" name="files[]" class="button profileimg" id="formFile" 
-                 accept="image/*" onchange="previewImage()" required>
-                <br> <br>
-                <input type=submit value=Upload class=button>
-            </div>
-
-        </form> -->
-    <div class="my-5">
-        <form action="/uploadimage" method="post" enctype="multipart/form-data">
-            <div class="upload-card">
-                <div class="file-upload">
-                    <div class="file-select">
-                        <div class="imagePreview"></div>
-                        <input type="file" name="files[]" class="button profileimg" id="formFile" accept="image/*"
-                            onchange="previewImage()" required>
-                        <button class="btn btn-secondary">Choose File</button>
-                        <input type="submit" value="Upload" class="btn btn-success ml-4">
-                    </div>
-                </div>
-            </div>
-
-        </form>
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <!-- <li><a href="//index">Home</a></li> -->
+            <li><a href="/about">About</a></li>
+            <li><a href="/login">login</a></li>
+            <li><a href="/loginadmin">admin</a></li>
+            <li><a href="/performance">performance</a></li>
+          </ul>
+        </nav><!-- #nav-menu-container -->
+      </div>
     </div>
-
-    <!-- <div class="upload-card">
-            <div class="text-right">
-                <button class="btn btn-primary mb-3 file-add">Add More File</button>
-            </div>
-            <div class="file-upload">
-                <div class="file-select">
-                    <div class="imagePreview"></div>
-                    <button class="btn btn-secondary">Choose File</button>
-                    <input type="file" name="files[]" class="profileimg">
-                </div>
-            </div>
-        </div> -->
-    <!-- upload section end -->
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .upload-card {
-            width: 400px;
-            padding: 30px;
-            margin: 0 auto;
-            background-color: #f5f5f5;
-        }
-
-        .imagePreview {
-            width: 38px;
-            height: 38px;
-            border-radius: 4px;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            margin-right: 15px;
-        }
-
-        .file-upload {
-            display: flex;
-            align-items: center;
-            padding: 15px;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.12);
-            margin-bottom: 15px;
-            position: relative;
-            border-radius: 4px;
-            background-color: #fff;
-        }
-
-        .file-select {
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
+  </header><!-- #header -->
 
 
-        .file-select-name {
-            margin-left: 15px;
-        }
-
-        .file-select input[type=file] {
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .file-remove {
-            margin-left: 15px;
-            position: absolute;
-            right: 15px;
-            top: 20px;
-        }
-    </style>
-    <script>
-        $(document).ready(function () {
-            $(document).on('change', '.file-upload input[type="file"]', function () {
-
-                var uploadFile = $(this);
-                var files = !!this.files ? this.files : [];
-                if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
-
-                if (/^image/.test(files[0].type)) { // only image file
-                    var reader = new FileReader(); // instance of the FileReader
-                    reader.readAsDataURL(files[0]); // read the local file
-
-                    reader.onloadend = function () { // set image data as background of div
-                        // alert(uploadFile.closest(".file-upload").find('.imagePreview').length);
-                        uploadFile.closest(".file-upload").find('.imagePreview').css("background-image", "url(" + this.result + ")");
-                    }
-                }
-            });
-            $(document).on('click', '.file-remove', function (e) {
-                e.preventDefault();
-                $(this).closest('.file-upload').remove();
-                return false;
-            });
-
-        });
-
-
-
-    </script>
-    </div>
-    <!-- navigation bar end  -->
-
-
-    <!-- footer section strat -->
-
-    <section>
-        <!-- Remove the container if you want to extend the Footer to full width. -->
-        <div class="container">
-          <!-- Footer -->
-          <footer class="text-center text-white" style="background-color: rgba(34, 34, 34, 0.9);">
-            <!-- Grid container -->
-            <div class="container">
-              <!-- Section: Links -->
-              <section>
-                <!-- Grid row-->
-                <div class="row text-center d-flex justify-content-center pt-5">
-                  <!-- Grid column -->
-                  <div class="col-md-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                      <a href="/index" class="text-white">Home</a>
-                    </h6>
-                  </div>
-                  <!-- Grid column -->
-    
-                  <!-- Grid column -->
-                  <div class="col-md-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                      <a href="/about" class="text-white">About us</a>
-                    </h6>
-                  </div>
-                  <!-- Grid column -->
-    
-                  <!-- Grid column -->
-                  <div class="col-md-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                      <a href="/performance" class="text-white">Performance</a>
-                    </h6>
-                  </div>
-                  <!-- Grid column -->
-    
-                  <!-- Grid column -->
-                  <div class="col-md-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                      <a href="/register" class="text-white">Sign Up</a>
-                    </h6>
-                  </div>
-                  <!-- Grid column -->
-    
-                  <!-- Grid column -->
-                  <div class="col-md-2">
-                    <h6 class="text-uppercase font-weight-bold">
-                      <a href="#!" class="text-white">Contact</a>
-                    </h6>
-                  </div>
-                  <!-- Grid column -->
-                </div>
-                <!-- Grid row-->
-              </section>
-              <!-- Section: Links -->
-    
-              <hr class="my-3" />
-    
-              <!-- Section: Text -->
-              <section class="mb-3">
-                <div class="row d-flex justify-content-center">
-                  <div class="col-lg-8">
-                    <p>
-                      Analyzing text or images to identify emotions; used in AI for sentiment analysis, mental health
-                      monitoring, and user experience enhancement.
-                    </p>
-                  </div>
-                </div>
-              </section>
-              <!-- Section: Text -->
-    
-              <!-- Section: Social -->
-              <section class="text-center mb-3">
-                <a href="" class="text-white ml-4">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="text-white ml-4">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="" class="text-white ml-4">
-                  <i class="fab fa-google"></i>
-                </a>
-                <a href="" class="text-white ml-4">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="text-white ml-4">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="text-white ml-4">
-                  <i class="fab fa-github"></i>
-                </a>
-              </section>
-              <!-- Section: Social -->
-            </div>
-            <!-- Grid container -->
-    
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-              © 2024 Copyright:
-              <a class="text-white" href="https://stressdetection/" target="_blank">stressdetection.com</a>
-            </div>
-            <!-- Copyright -->
-          </footer>
-          <!-- Footer -->
+  <!-- start banner Area -->
+  <section class="about-banner relative">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+      <div class="row d-flex align-items-center justify-content-center">
+        <div class="about-content col-lg-12">
+          <h1 class="text-white">
+            Upload
+          </h1>
+          <p class="text-white link-nav"><a href="/index">Home </a> <span class="lnr lnr-arrow-right"></span> <a
+              href="/upload">Upload</a></p>
         </div>
-        <!-- End of .container -->
-      </section>
-    <!-- footer section end  -->
+      </div>
+    </div>
+  </section>
+  <!-- End banner Area -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
-    <script src="/static/tests/js/vendor/jquery-2.2.4.min.js"></script> 
-    <script src="/static/tests/js/vendor/bootstrap.min.js"></script>  
-    <script src="/static/tests/js/hoverIntent.js"></script>
-    <script src="/static/tests/js/superfish.min.js"></script> 
-    <script src="/static/tests/js/jquery.magnific-popup.min.js"></script> 
-    <script src="/static/tests/js/owl.carousel.min.js"></script> 
-    <script src="/static/tests/js/main.js"></script>
+
+  <div class="d-flex justify-content-center my-5 w-100">
+    <!-- <div  class="upload-card file-upload file-select">
+    <form action="/uploadimage" method="post" enctype="multipart/form-data">
+
+
+      <div class="imagePreview"></div>
+      <input type="file" name="file" class="button" id="formFile" accept="image/*" onchange="previewImage()"  placeholder="image"
+         class=button accept="image/*" onchange=previewImage(); required>
+       
+      <input type="submit" value="Submit" class="btn btn-success ml-4 button-submit">
+
+    </form>
+    </div> -->
+    <form action=/uploadimage method=post enctype=multipart/form-data>
+      <div class="imagePreview"></div>
+      <input type=file name=file class=button accept=image/* onchange=previewImage();
+          required>
+      </br>
+      </br>
+      </br>
+      </br>
+      <input type=submit style="margin-left:100px" value=Upload class=button>
+  </form>
+  </div>
+
+  <script>
+    // $(document).ready(function () {
+    //   $(document).on('change', '.file-upload input[type="file"]', function () {
+    //     var uploadFile = $(this);
+    //     var files = !!this.files ? this.files : [];
+    //     if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+
+    //     if (/^image/.test(files[0].type)) { // only image file
+    //       var reader = new FileReader(); // instance of the FileReader
+    //       reader.readAsDataURL(files[0]); // read the local file
+
+    //       reader.onloadend = function () { // set image data as background of div
+    //         uploadFile.closest(".file-upload").find('.imagePreview').css("background-image", "url(" + this.result + ")");
+    //       }
+    //     }
+    //   });
+
+    //   $('.button-submit').on('submit', 'form', function (e) {
+    //     e.preventDefault(); // prevent default form submission
+    //     var formData = new FormData($(this)[0]);
+
+    //     $.ajax({
+    //       url: '/uploadimage',
+    //       type: 'POST',
+    //       data: formData,
+    //       processData: false,
+    //       contentType: false,
+    //       success: function (response) {
+    //         // Handle success response here
+    //         console.log(response);
+    //       },
+    //       error: function (xhr, status, error) {
+    //         // Handle error response here
+    //         console.error(xhr, status, error);
+    //       }
+    //     });
+    //   });
+
+    //   $(document).on('click', '.file-remove', function (e) {
+    //     e.preventDefault();
+    //     $(this).closest('.file-upload').remove();
+    //     return false;
+    //   });
+
+    // });
+
+    function previewImage() {
+      var file = document.getElementById("imagefile").files;
+      if (file.length > 0) {
+        var fileReader = new FileReader();
+
+        fileReader.onload = function (event) {
+          document.getElementById("preview").setAttribute("src", event.target.result);
+        };
+
+        fileReader.readAsDataURL(file[0]);
+      }
+    }
+    $(document).ready(function () {
+    $(document).on('change', '.file-upload input[type="file"]', function () {
+        var uploadFile = $(this);
+        var files = !!this.files ? this.files : [];
+        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+
+        if (/^image/.test(files[0].type)) { // only image file
+          var reader = new FileReader(); // instance of the FileReader
+          reader.readAsDataURL(files[0]); // read the local file
+
+          reader.onloadend = function () { // set image data as background of div
+            uploadFile.closest(".file-upload").find('.imagePreview').css("background-image", "url(" + this.result + ")");
+          }
+        }
+      });
+    });
+  </script>
+  </div>
+  <!-- navigation bar end  -->
+
+
+  <!-- footer section strat -->
+
+  <section>
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+    <div class="container">
+      <!-- Footer -->
+      <footer class="text-center text-white" style="background-color: rgba(34, 34, 34, 0.9);">
+        <!-- Grid container -->
+        <div class="container">
+          <!-- Section: Links -->
+          <section>
+            <!-- Grid row-->
+            <div class="row text-center d-flex justify-content-center pt-5">
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="/index" class="text-white">Home</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="/about" class="text-white">About us</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="/performance" class="text-white">Performance</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="/register" class="text-white">Sign Up</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+
+              <!-- Grid column -->
+              <div class="col-md-2">
+                <h6 class="text-uppercase font-weight-bold">
+                  <a href="#!" class="text-white">Contact</a>
+                </h6>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row-->
+          </section>
+          <!-- Section: Links -->
+
+          <hr class="my-3" />
+
+          <!-- Section: Text -->
+          <section class="mb-3">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8">
+                <p>
+                  Analyzing text or images to identify emotions; used in AI for sentiment analysis, mental health
+                  monitoring, and user experience enhancement.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- Section: Text -->
+
+          <!-- Section: Social -->
+          <section class="text-center mb-3">
+            <a href="" class="text-white ml-4">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="text-white ml-4">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="text-white ml-4">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="text-white ml-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="text-white ml-4">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="text-white ml-4">
+              <i class="fab fa-github"></i>
+            </a>
+          </section>
+          <!-- Section: Social -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+          © 2024 Copyright:
+          <a class="text-white" href="https://stressdetection/" target="_blank">stressdetection.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
+    <!-- End of .container -->
+  </section>
+  <!-- footer section end  -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="/static/tests/js/vendor/jquery-2.2.4.min.js"></script>
+  <script src="/static/tests/js/vendor/bootstrap.min.js"></script>
+  <script src="/static/tests/js/hoverIntent.js"></script>
+  <script src="/static/tests/js/superfish.min.js"></script>
+  <script src="/static/tests/js/jquery.magnific-popup.min.js"></script>
+  <script src="/static/tests/js/owl.carousel.min.js"></script>
+  <script src="/static/tests/js/main.js"></script>
+  <script src="/static/tests/js/jquery-ui.js"></script>
+  <script src="/static/tests/js/jquery.ajaxchimp.min.js"></script>
 </body>
 
 </html>
