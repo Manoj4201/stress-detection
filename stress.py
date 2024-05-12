@@ -129,6 +129,9 @@ mysql = MySQL(app)
 @app.route('/',methods = ['GET','POST'])
 def home():
     return render_template('index.html')
+@app.route('/index',methods = ['GET','POST'])
+def home_page():
+    return render_template('index.html')
  
 @app.route('/video_feed')
 def video_feed():
@@ -213,7 +216,7 @@ def login():
             session['username'] = account['username']
             Username = session['username']
             # Redirect to home page
-            return redirect(url_for('first'))
+            return redirect(url_for('upload'))
         else:
             # Account doesnt exist or username/password incorrect
             flash('Incorrect username/password! Please login with correct credentials')
@@ -234,9 +237,9 @@ def login():
 #         else:
 #             return 'invalid login'
   
-@app.route("/first", methods=['GET', 'POST'])
+@app.route("/upload", methods=['GET', 'POST'])
 def first():
-	return render_template("first.html")
+	return render_template("upload.html")
 
 @app.route('/uploadimage', methods=['POST'])
 def uploadimage():
@@ -275,8 +278,8 @@ def uploadimage():
             cur.execute("INSERT INTO review(sentence,filename,userid) VALUES ( %s, %s,%s) ", (sentence,filename,Id))
             mysql.connection.commit()
             cur.close()
-            return redirect('/first')
-    return render_template('first.html')      
+            return redirect('/upload')
+    return render_template('upload.html')      
 
  
 @app.route('/userdetail')
