@@ -144,7 +144,7 @@
             <!-- <li><a href="//index">Home</a></li> -->
             <li><a href="/about">About</a></li>
             <li><a href="/login">login</a></li>
-            <li><a href="/loginadmin">admin</a></li>
+            <li><a href="/camera">Camera</a></li>
             <li><a href="/performance">performance</a></li>
           </ul>
         </nav><!-- #nav-menu-container -->
@@ -172,75 +172,19 @@
 
 
   <div class="d-flex justify-content-center my-5 w-100">
-    <!-- <div  class="upload-card file-upload file-select">
-    <form action="/uploadimage" method="post" enctype="multipart/form-data">
 
-
-      <div class="imagePreview"></div>
-      <input type="file" name="file" class="button" id="formFile" accept="image/*" onchange="previewImage()"  placeholder="image"
-         class=button accept="image/*" onchange=previewImage(); required>
-       
-      <input type="submit" value="Submit" class="btn btn-success ml-4 button-submit">
-
-    </form>
-    </div> -->
     <form action=/uploadimage method=post enctype=multipart/form-data>
       <div class="imagePreview"></div>
-      <input type=file name=file class=button accept=image/* onchange=previewImage();
-          required>
+      <input type=file name=file class=button accept=image/* onchange=previewImage(); required>
       </br>
       </br>
       </br>
       </br>
       <input type=submit style="margin-left:100px" value=Upload class=button>
-  </form>
+    </form>
   </div>
 
   <script>
-    // $(document).ready(function () {
-    //   $(document).on('change', '.file-upload input[type="file"]', function () {
-    //     var uploadFile = $(this);
-    //     var files = !!this.files ? this.files : [];
-    //     if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
-
-    //     if (/^image/.test(files[0].type)) { // only image file
-    //       var reader = new FileReader(); // instance of the FileReader
-    //       reader.readAsDataURL(files[0]); // read the local file
-
-    //       reader.onloadend = function () { // set image data as background of div
-    //         uploadFile.closest(".file-upload").find('.imagePreview').css("background-image", "url(" + this.result + ")");
-    //       }
-    //     }
-    //   });
-
-    //   $('.button-submit').on('submit', 'form', function (e) {
-    //     e.preventDefault(); // prevent default form submission
-    //     var formData = new FormData($(this)[0]);
-
-    //     $.ajax({
-    //       url: '/uploadimage',
-    //       type: 'POST',
-    //       data: formData,
-    //       processData: false,
-    //       contentType: false,
-    //       success: function (response) {
-    //         // Handle success response here
-    //         console.log(response);
-    //       },
-    //       error: function (xhr, status, error) {
-    //         // Handle error response here
-    //         console.error(xhr, status, error);
-    //       }
-    //     });
-    //   });
-
-    //   $(document).on('click', '.file-remove', function (e) {
-    //     e.preventDefault();
-    //     $(this).closest('.file-upload').remove();
-    //     return false;
-    //   });
-
-    // });
 
     function previewImage() {
       var file = document.getElementById("imagefile").files;
@@ -255,7 +199,7 @@
       }
     }
     $(document).ready(function () {
-    $(document).on('change', '.file-upload input[type="file"]', function () {
+      $(document).on('change', '.file-upload input[type="file"]', function () {
         var uploadFile = $(this);
         var files = !!this.files ? this.files : [];
         if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
