@@ -326,7 +326,7 @@ def admin():
 def performance():
 	return render_template("performance.html") 
 
-@app.route('/chart3')
+@app.route('/chart')
 def chart3():
     legend = "review by sentence"
     cursor = mysql.connection.cursor()    
