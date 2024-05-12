@@ -223,7 +223,7 @@ def login():
             return redirect(url_for('login'))
     # Show the login form with message (if any)
 
-    return render_template('login.html',)
+    return render_template('login.html', msg=msg)
 # @app.route('/loginaction',methods=['GET','POST'])
 # def loginaction():
 #     if request.method=='POST':
@@ -238,7 +238,7 @@ def login():
 #             return 'invalid login'
   
 @app.route("/upload", methods=['GET', 'POST'])
-def first():
+def upload():
 	return render_template("upload.html")
 
 @app.route('/uploadimage', methods=['POST'])
